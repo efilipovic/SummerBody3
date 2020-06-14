@@ -26,7 +26,7 @@ class ProgramDetailsActivity : AppCompatActivity() {
 
         button_startworkout.setOnClickListener{
             val Workoutintent = Intent(applicationContext, ProgramWorkoutActivity::class.java)
-           // val Workoutintent = Intent(this,ProgramWorkoutActivity::class.java)
+            // val Workoutintent = Intent(this,ProgramWorkoutActivity::class.java)
             Workoutintent.putExtra(ProgramWorkoutActivity.KEY_PROGRAM_ID, program_id)
             startActivity(Workoutintent)
             finish()
