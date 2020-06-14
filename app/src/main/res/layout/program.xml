@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    app:cardCornerRadius="15dp"
+    android:layout_gravity="center_horizontal"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="10dp">
+
+    <RelativeLayout
+        android:id="@+id/program"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_height">
+    <ImageView
+        android:id="@+id/programImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+        <TextView
+            android:text="Muscle &amp; Strength"
+            android:layout_margin="@dimen/margin_layout"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/label_text_size"
+            android:id="@+id/program_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="   20 minutes"
+            android:layout_margin="@dimen/margin_layout"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:drawableTint="@color/white"
+            android:drawableLeft="@drawable/timer16"
+            android:id="@+id/program_duration"
+            android:textSize="@dimen/label_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:drawableLeft="@drawable/fire_16"
+            android:text="  347 kcal"
+            android:layout_alignParentBottom="true"
+           android:layout_alignParentRight="true"
+            android:textStyle="bold"
+           android:layout_margin="@dimen/margin_layout"
+            android:textColor="@color/white"
+            android:textSize="@dimen/label_text_size"
+            android:id="@+id/program_calories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/programDetailsImage"
+        android:src="@drawable/stretchandrelax"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="wrap_content"
+       />
+
+
+    <ImageButton
+        android:id="@+id/back_arrow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_all"
+        android:tint="@color/white"
+        android:src="?attr/homeAsUpIndicator"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    <TextView
+        android:id="@+id/title_program_details"
+        app:layout_constraintLeft_toRightOf="@id/back_arrow"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Body and soul"
+        android:textColor="@color/white"
+        android:textSize="@dimen/subtitle_text_size"
+        android:textStyle="bold"
+        android:padding="14dp"
+        />
+
+    <TextView
+        android:text="   20 minutes"
+        app:layout_constraintLeft_toLeftOf="@+id/description_program"
+        android:layout_margin="@dimen/margin_layout"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/programDetailsImage"
+        android:textColor="@color/colorPrimary"
+        android:drawableTint="@color/colorPrimary"
+        android:drawableLeft="@drawable/timer16"
+        android:id="@+id/program_duration_details"
+        android:textSize="@dimen/label_text_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/program_calories_details"
+        android:drawableLeft="@drawable/fire_16"
+        app:layout_constraintLeft_toRightOf="@id/program_duration_details"
+        app:layout_constraintTop_toBottomOf="@+id/programDetailsImage"
+        android:text="  347 kcal"
+        android:textStyle="bold"
+        android:drawableTint="@color/colorPrimary"
+        android:layout_margin="@dimen/margin_layout"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/label_text_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:drawableLeft="@drawable/gym"
+        app:layout_constraintRight_toRightOf="@id/description_program"
+        app:layout_constraintTop_toBottomOf="@+id/programDetailsImage"
+        android:text="  6 exercises"
+        android:textStyle="bold"
+        android:drawableTint="@color/colorPrimary"
+        android:layout_margin="@dimen/margin_layout"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/label_text_size"
+        android:id="@+id/program_exercises_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/description_program"
+        app:layout_constraintTop_toBottomOf="@+id/program_duration_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="There's nothing like a good stretch to refresh the body and reduce stress. But the benefits go way beyond relaxation: The act of stretching has also been shown to improve range of motion, boost energy and increase blood flow through the body. In addition to that good feeling, the act of lengthening the body or limbs in a consistent stretching program will produce large gains in flexibility and joint movement."
+        android:textSize="@dimen/label_text_size"
+        android:padding="14dp"
+        />
+    <Button
+        android:id="@+id/button_startworkout"
+        android:textSize="@dimen/label_text_size"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:background="@drawable/primary_button_pink"
+        android:text="@string/btn_start_workout"
+        android:textAllCaps="false"
+        android:layout_margin="@dimen/btn_margin"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <ImageButton
+        android:id="@+id/back_arrow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_all"
+        android:tint="@color/black"
+        android:src="?attr/homeAsUpIndicator"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    <TextView
+        android:id="@+id/title_program_workout"
+        app:layout_constraintLeft_toRightOf="@id/back_arrow"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Squats"
+        android:textColor="@color/black"
+        android:textSize="@dimen/subtitle_text_size"
+        android:textStyle="bold"
+        android:padding="14dp"
+        />
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/workout_item_image"
+        android:layout_width="@dimen/workout_item_width"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/title_program_workout"
+        android:src="@drawable/stretchandrelax"
+        android:adjustViewBounds="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+<!--    <ImageView-->
+<!--        android:id="@+id/workout_item_image"-->
+<!--        android:layout_width="@dimen/workout_item_width"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/title_program_workout"-->
+<!--        android:src="@drawable/stretchandrelax"-->
+<!--        android:adjustViewBounds="true"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"/>-->
+    <TextView
+        android:id="@+id/workout_item_description"
+        android:layout_width="@dimen/workout_item_width"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/workout_item_image"
+        android:text="this is a description"
+        android:layout_margin="@dimen/margin_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/button_nextworkout"
+        android:textSize="@dimen/label_text_size"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:background="@drawable/primary_button_pink"
+        android:text="@string/btn_next_workout"
+        android:textAllCaps="false"
+        android:layout_margin="@dimen/btn_margin"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

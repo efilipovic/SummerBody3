@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Summer Body</string>
+    <string name="welcome_label">Welcome back!</string>
+    <string name="sign_up">Don\'t have an account? <b>Sign up!</b></string>
+    <string name="please_signin">Please, sign in to continue</string>
+    <string name="forgot_password">Forgot your password?</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_sign_in">Sign In</string>
+    <string name="title_programs">Programs</string>
+    <string name="sign_up_label">Let\'s get started!</string>
+    <string name="create_account_label">Create an account to continue</string>
+    <string name="sign_up_btn">Sign up</string>
+    <string name="error_empty_email">Please enter your email</string>
+    <string name="error_mail_format">Please enter valid email</string>
+    <string name="error_empty_pass">Please enter your password</string>
+    <string name="already_have_acc">Already have an account? <b>Login here</b></string>
+    <string name="btn_start_workout">Start workout</string>
+    <string name="btn_next_workout">Next workout</string>
+</resources>

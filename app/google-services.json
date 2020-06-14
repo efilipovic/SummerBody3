@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "344399749921",
+    "firebase_url": "https://summer-body-8df67.firebaseio.com",
+    "project_id": "summer-body-8df67",
+    "storage_bucket": "summer-body-8df67.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:344399749921:android:fa9d7f7bb7119ebe2e9460",
+        "android_client_info": {
+          "package_name": "enafilipovic.ferit.summerbody"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "344399749921-ldrjlbvohnpnlp6salqofrg0pedb704l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "enafilipovic.ferit.summerbody",
+            "certificate_hash": "0bf8f8509fa3b8bc16802322abf22184ff5eac7e"
+          }
+        },
+        {
+          "client_id": "344399749921-mlk4611nd1fdc15pkrvdma7ko5kr9pdl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArnS3JUVyhtknK2kY0TOAVwfZ2fc9Q0M4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "344399749921-mlk4611nd1fdc15pkrvdma7ko5kr9pdl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
