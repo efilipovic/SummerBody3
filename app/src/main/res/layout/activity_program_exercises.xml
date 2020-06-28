@@ -17,6 +17,7 @@
         android:src="?attr/homeAsUpIndicator"
         android:background="?attr/selectableItemBackgroundBorderless"/>
 
+
     <TextView
         android:id="@+id/title_program_workout"
         app:layout_constraintLeft_toRightOf="@id/back_arrow"

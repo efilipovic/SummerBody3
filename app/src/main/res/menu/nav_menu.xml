@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_profile"
+            android:title="Profile"/>
+        <item
+            android:id="@+id/nav_programs"
+            android:icon="@drawable/ic_programs"
+            android:title="Programs"/>
+        <item
+            android:id="@+id/nav_weight"
+            android:icon="@drawable/ic_weight"
+            android:title="Weight tracker"/>
+        <item
+            android:id="@+id/nav_measurements"
+            android:icon="@drawable/ic_measurements"
+            android:title="Measurement tracker"/>
+        <item
+            android:id="@+id/nav_photos"
+            android:icon="@drawable/ic_photos"
+            android:title="Photo tracker"/>
+        <item
+            android:id="@+id/nav_logoout"
+            android:icon="@drawable/ic_logout"
+            android:title="Log out"/>
+    </group>
+
+</menu>
