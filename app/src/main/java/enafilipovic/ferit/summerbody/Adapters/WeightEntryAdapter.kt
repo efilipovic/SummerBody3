@@ -19,16 +19,7 @@ class WeightEntryAdapter (options: FirestoreRecyclerOptions<WeightEntry>): Fires
     override fun onBindViewHolder(weightViewHolder: WeightEntryHolder, position: Int, weightentry: WeightEntry) {
         // Show weight
         weightViewHolder.weightView?.text = "${weightentry.weight} kg"
-      //  weightViewHolder.weightView?.text = "lb"
-
-    // Show date and time
-
-   //   val formattedDate = weightentry.date.toDate()
-        //  DateUtils.formatDateTime(context,
-         //  weightentry.date,
-          //  DateUtils.FORMAT_SHOW_DATE or
-           //        DateUtils.FORMAT_SHOW_TIME or
-            //       DateUtils.FORMAT_SHOW_YEAR)
+        // Show date and time
         weightViewHolder.timeView?.text = convertLongToTime(weightentry.date)
     }
 

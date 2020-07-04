@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,20 +7,61 @@
     android:layout_height="match_parent"
     tools:context=".Activities.WeightTrackerActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/weight_view">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <ImageButton
+        android:id="@+id/back_arrow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="16dp"
-        android:tint="@color/colorPrimary"
-        android:onClick="addWeight"/>
+        android:padding="@dimen/padding_all"
+        android:src="?attr/homeAsUpIndicator"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
 
-</RelativeLayout>
+    <TextView
+
+        android:id="@+id/title_weight_tracker"
+        app:layout_constraintLeft_toRightOf="@id/back_arrow"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_weight_tracker"
+        android:textColor="@color/black"
+        android:textSize="@dimen/subtitle_text_size"
+        android:textStyle="bold"
+        android:padding="14dp"
+        />
+
+    <Button
+        android:id="@+id/btn_weight_history"
+        android:textSize="@dimen/label_text_size"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_layout"
+        android:background="@drawable/primary_button"
+        android:text="@string/btn_weight_history"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add_weight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_add_weight"
+        android:textSize="@dimen/label_text_size"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:background="@drawable/primary_button_pink"
+        android:text="@string/btn_add_weight"
+        android:textAllCaps="false"
+        android:layout_margin="@dimen/btn_margin"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="addWeight"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
