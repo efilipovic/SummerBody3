@@ -64,6 +64,7 @@ class ProgramViewActivity : AppCompatActivity(), NavigationView.OnNavigationItem
             programListener
         )
 
+
     }
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
@@ -74,7 +75,7 @@ class ProgramViewActivity : AppCompatActivity(), NavigationView.OnNavigationItem
                 Toast.makeText(this, "Messages clicked", Toast.LENGTH_SHORT).show()
             }
             R.id.nav_weight -> {
-                Toast.makeText(this, "Friends clicked", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, WeightTrackerActivity::class.java))
             }
             R.id.nav_measurements -> {
                 Toast.makeText(this, "Update clicked", Toast.LENGTH_SHORT).show()
