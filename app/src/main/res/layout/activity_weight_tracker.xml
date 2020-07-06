@@ -30,6 +30,15 @@
         android:textStyle="bold"
         android:padding="14dp"
         />
+    <com.github.mikephil.charting.charts.LineChart
+        app:layout_constraintTop_toBottomOf="@id/back_arrow"
+        android:padding="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="400dip"
+        android:layout_margin="15dp"
+
+
+        android:id="@+id/weight_graph" />
 
     <Button
         android:id="@+id/btn_weight_history"
@@ -60,7 +69,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:onClick="addWeight"
+        android:onClick="insertWeightData"
         />
 
 
