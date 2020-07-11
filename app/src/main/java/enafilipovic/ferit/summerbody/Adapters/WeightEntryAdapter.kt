@@ -30,7 +30,7 @@ class WeightEntryAdapter (options: FirestoreRecyclerOptions<WeightEntry>): Fires
 
     fun convertLongToTime(time: Long): String {
         val date = Date(time)
-        val format = SimpleDateFormat("yyyy.MM.dd HH:mm")
+        val format = SimpleDateFormat("yyyy.MM.dd")
         return format.format(date)
     }
 

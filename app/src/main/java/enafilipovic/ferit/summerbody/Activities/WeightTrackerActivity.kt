@@ -12,10 +12,16 @@ import com.afollestad.materialdialogs.MaterialDialog
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.charts.LineChart
+import com.github.mikephil.charting.components.AxisBase
+import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
+import com.github.mikephil.charting.formatter.IAxisValueFormatter
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
+import com.github.mikephil.charting.formatter.ValueFormatter
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet
+import com.github.mikephil.charting.utils.ViewPortHandler
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DataSnapshot
@@ -30,6 +36,7 @@ import enafilipovic.ferit.summerbody.Adapters.WeightEntryAdapter
 import enafilipovic.ferit.summerbody.Models.WeightEntry
 import enafilipovic.ferit.summerbody.R
 import kotlinx.android.synthetic.main.activity_weight_tracker.*
+import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -73,13 +80,25 @@ class WeightTrackerActivity : AppCompatActivity() {
                     val weights = ArrayList<Entry?>()
 
                     for (doc in querysnapshot!!.documents) {
-                        val weight_entry = doc.toObject(WeightEntry::class.java)
-                        var dateformat = (weight_entry!!.weight/10000)*1000
-                        weights.add(Entry( dateformat.toFloat(),weight_entry.weight.toFloat()))
+                         val weight_entry = doc.toObject(WeightEntry::class.java)
+                        weights.add(Entry( weight_entry!!.date.toFloat(),weight_entry.weight.toFloat()))
                     }
-              //      Log.d("tag", "Current weight entries: $weights")
 
-                  showChart(weights)
+
+                // showChart
+                    val vl = LineDataSet(weights,"My weight trend")
+                    vl.setDrawValues((true))
+                    vl.setDrawFilled(true)
+                    vl.lineWidth = 3f
+                    weight_graph.xAxis.labelRotationAngle=60f
+                    val xAxis=weight_graph.xAxis
+                    xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+                    weight_graph.data=LineData(vl)
+                    xAxis.valueFormatter=(DateValueFormatter())
+                    weight_graph.setTouchEnabled(true)
+                    weight_graph.setPinchZoom(true)
+                    weight_graph.description.text = "Time"
+                    weight_graph.animateX(1800, Easing.EaseInExpo)
                 }
            } else{
             startActivity(Intent(this, MainActivity::class.java))
@@ -87,29 +106,6 @@ class WeightTrackerActivity : AppCompatActivity() {
         }
     }
 
-    private fun showChart(weights: ArrayList<Entry?>) {
-
-        val vl = LineDataSet(weights,"My weight trend")
-
-        vl.setDrawValues((false))
-        vl.setDrawFilled(true)
-        vl.lineWidth = 3f
-        vl.fillColor = R.color.colorPrimary
-        vl.fillAlpha = R.color.colorPrimary
-
-        weight_graph.xAxis.labelRotationAngle=0f
-
-        weight_graph.data=LineData(vl)
-        weight_graph.axisRight.isEnabled = false
-        weight_graph.xAxis.axisMaximum = 0.1f
-        weight_graph.setTouchEnabled(true)
-        weight_graph.setPinchZoom(true)
-        weight_graph.description.text = "Time"
-        weight_graph.animateX(1800, Easing.EaseInExpo)
-
-
-
-    }
 
     fun insertWeightData(v: View) {
         MaterialDialog.Builder(this)
@@ -131,6 +127,16 @@ class WeightTrackerActivity : AppCompatActivity() {
         return users.document(uid)
     }
 
-  
+
+    class DateValueFormatter() : ValueFormatter() {
+
+        override fun getFormattedValue(value: Float): String {
+            var time=value.toLong()
+            var date = Date(time)
+            val format = SimpleDateFormat("dd. MMM yyyy.")
+            return format.format(date)
+        }
+
+    }
 
 }

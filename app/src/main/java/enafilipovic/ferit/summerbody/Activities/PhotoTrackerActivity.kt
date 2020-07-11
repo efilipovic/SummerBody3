@@ -1,17 +1,13 @@
 package enafilipovic.ferit.summerbody.Activities
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.google.firebase.auth.FirebaseAuth
 import enafilipovic.ferit.summerbody.R
-import kotlinx.android.synthetic.main.activity_weight_tracker.*
 
-class MeasurementTrackerActivity : AppCompatActivity() {
+class PhotoTrackerActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_measurement_tracker)
-
+        setContentView(R.layout.activity_photo_tracker)
     }
 }
