@@ -72,13 +72,13 @@ class ProgramViewActivity : AppCompatActivity(), NavigationView.OnNavigationItem
                 Toast.makeText(this, "Profile clicked", Toast.LENGTH_SHORT).show()
             }
             R.id.nav_programs -> {
-                Toast.makeText(this, "Messages clicked", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, ProgramViewActivity::class.java))
             }
             R.id.nav_weight -> {
                 startActivity(Intent(this, WeightTrackerActivity::class.java))
             }
             R.id.nav_measurements -> {
-                Toast.makeText(this, "Update clicked", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, MeasurementTrackerActivity::class.java))
             }
             R.id.nav_logoout -> {
                 Toast.makeText(this, "Sign out clicked", Toast.LENGTH_SHORT).show()
