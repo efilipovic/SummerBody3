@@ -1,31 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_all">
 
 
     <EditText
         android:id="@+id/hips"
-        android:hint="Enter Hips"
+        android:hint="@string/hip_circumference"
         android:inputType="numberDecimal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_all"/>
     <EditText
         android:id="@+id/waist"
-        android:hint="Enter Waist"
+        android:hint="@string/enter_waist_circumference"
         android:inputType="numberDecimal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_all"/>
     <EditText
         android:id="@+id/breast"
-        android:hint="Enter Breast"
+        android:hint="@string/enter_breast_circumference"
         android:inputType="numberDecimal"
         android:layout_width="match_parent"
+        android:padding="@dimen/padding_all"
         android:layout_height="wrap_content" />
     <Button
         android:id="@+id/btn_add_measur"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add measurements"></Button>
+        android:gravity="right"
+        android:padding="@dimen/padding_all"
+        android:background="@color/fui_transparent"
+        android:text="U REDU"/>
 
 </LinearLayout>

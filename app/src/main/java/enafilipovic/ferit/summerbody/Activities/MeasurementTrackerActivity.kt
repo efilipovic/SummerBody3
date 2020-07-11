@@ -50,6 +50,7 @@ class MeasurementTrackerActivity : AppCompatActivity() {
         lineChart = findViewById(R.id.measurement_graph)
 
     }
+    @RequiresApi(Build.VERSION_CODES.M)
     public override fun onStart() {
         super.onStart()
         // Check if user is signed in (non-null) and update UI accordingly.
@@ -91,12 +92,11 @@ class MeasurementTrackerActivity : AppCompatActivity() {
                     waist_line.setDrawValues((true))
                     waist_line.color=getColor(R.color.colorPrimary)
                     waist_line.lineWidth = 3f
-
                     lines.addDataSet(waist_line)
 
                     val breast_line = LineDataSet(measurements_breast,"My breast trend")
                     breast_line.setDrawValues((true))
-                    breast_line.color=Color.DKGRAY
+                    breast_line.color=Color.GRAY
                     breast_line.lineWidth = 3f
                     lines.addDataSet(breast_line)
 
@@ -110,9 +110,6 @@ class MeasurementTrackerActivity : AppCompatActivity() {
                     measurement_graph.setPinchZoom(true)
                     measurement_graph.description.text = "Time"
                     measurement_graph.animateX(1800, Easing.EaseInExpo)
-
-
-
                 }
         } else{
             startActivity(Intent(this, MainActivity::class.java))

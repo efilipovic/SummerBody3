@@ -39,7 +39,7 @@
 
         android:id="@+id/measurement_graph" />
 
-    <Button
+<!--    <Button
         android:id="@+id/btn_measurement_history"
         android:textSize="@dimen/label_text_size"
         android:layout_width="@dimen/button_width"
@@ -52,7 +52,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btn_add_measurements"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />-->
 
     <Button
         android:id="@+id/btn_add_measurements"

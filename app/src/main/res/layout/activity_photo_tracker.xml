@@ -29,6 +29,13 @@
         android:textStyle="bold"
         android:padding="14dp"
         />
+    <ImageView
+        app:layout_constraintTop_toBottomOf="@id/title_photo_tracker"
+        android:layout_width="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_picture"/>
 
     <Button
         android:id="@+id/btn_add_photo"
