@@ -1,11 +1,13 @@
 package enafilipovic.ferit.summerbody.Activities
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.provider.ContactsContract
 import android.text.InputType
 import android.util.Log
 import android.view.View
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import com.afollestad.materialdialogs.MaterialDialog
@@ -43,7 +45,6 @@ import kotlin.collections.ArrayList
 
 class WeightTrackerActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
-    private var adapter: WeightEntryAdapter? = null
     lateinit var lineChart: LineChart
 
 
@@ -61,6 +62,7 @@ class WeightTrackerActivity : AppCompatActivity() {
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     public override fun onStart() {
         super.onStart()
         // Check if user is signed in (non-null) and update UI accordingly.
@@ -68,6 +70,7 @@ class WeightTrackerActivity : AppCompatActivity() {
         updateUI(currentUser)
     }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     private fun updateUI(currentUser : FirebaseUser?){
         if(currentUser!=null){
             //Graph view
@@ -84,16 +87,17 @@ class WeightTrackerActivity : AppCompatActivity() {
                         weights.add(Entry( weight_entry!!.date.toFloat(),weight_entry.weight.toFloat()))
                     }
 
-
                 // showChart
-                    val vl = LineDataSet(weights,"My weight trend")
-                    vl.setDrawValues((true))
-                    vl.setDrawFilled(true)
-                    vl.lineWidth = 3f
+                    val weight_line = LineDataSet(weights,"My weight trend")
+                    weight_line.setDrawValues((true))
+                    weight_line.setDrawFilled(true)
+                    weight_line.lineWidth = 3f
+                    weight_line.color=getColor(R.color.colorPrimary)
                     weight_graph.xAxis.labelRotationAngle=60f
+                    weight_line.fillColor=getColor(R.color.colorPrimary)
                     val xAxis=weight_graph.xAxis
                     xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
-                    weight_graph.data=LineData(vl)
+                    weight_graph.data=LineData(weight_line)
                     xAxis.valueFormatter=(DateValueFormatter())
                     weight_graph.setTouchEnabled(true)
                     weight_graph.setPinchZoom(true)

@@ -23,5 +23,7 @@
     <string name="btn_add_measurements">New measurement entry</string>
     <string name="btn_measurement_history">Measurement history</string>
     <string name="title_measurement_tracker">Measurement tracker</string>
+    <string name="btn_add_photo">New progress photo</string>
+    <string name="title_photo_tracker">Photo tracker</string>
 
 </resources>

@@ -18,12 +18,12 @@
 
     <TextView
 
-        android:id="@+id/title_weight_tracker"
+        android:id="@+id/title_photo_tracker"
         app:layout_constraintLeft_toRightOf="@id/back_arrow"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title_weight_tracker"
+        android:text="@string/title_photo_tracker"
         android:textColor="@color/black"
         android:textSize="@dimen/subtitle_text_size"
         android:textStyle="bold"
@@ -31,12 +31,12 @@
         />
 
     <Button
-        android:id="@+id/btn_add_weight"
+        android:id="@+id/btn_add_photo"
         android:textSize="@dimen/label_text_size"
         android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
         android:background="@drawable/primary_button_pink"
-        android:text="@string/btn_add_weight"
+        android:text="@string/btn_add_photo"
         android:textAllCaps="false"
         android:layout_margin="@dimen/btn_margin"
         android:textColor="@color/white"
@@ -44,7 +44,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:onClick="insertWeightData"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

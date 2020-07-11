@@ -82,9 +82,6 @@ class ProgramViewActivity : AppCompatActivity(), NavigationView.OnNavigationItem
             R.id.nav_profile -> {
                 Toast.makeText(this, "Profile clicked", Toast.LENGTH_SHORT).show()
             }
-            R.id.nav_programs -> {
-                startActivity(Intent(this, ProgramViewActivity::class.java))
-            }
             R.id.nav_weight -> {
                 startActivity(Intent(this, WeightTrackerActivity::class.java))
             }
