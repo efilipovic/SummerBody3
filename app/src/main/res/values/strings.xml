@@ -4,7 +4,7 @@
     <string name="sign_up">Don\'t have an account? <b>Sign up!</b></string>
     <string name="please_signin">Please, sign in to continue</string>
     <string name="forgot_password">Forgot your password?</string>
-    <string name="hint_username">Username</string>
+    <string name="hint_username">E-mail</string>
     <string name="hint_password">Password</string>
     <string name="btn_sign_in">Sign In</string>
     <string name="title_programs">Programs</string>

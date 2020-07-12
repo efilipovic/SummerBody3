@@ -122,7 +122,7 @@ class PhotoTrackerActivity : AppCompatActivity() {
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         //Create image file if photo capured
         if(intent.resolveActivity(packageManager)!=null){
-            var photoFile: File?=null            
+            var photoFile: File?
             photoFile=createImageFile()
             if(photoFile!=null){
                 val photoUri=FileProvider.getUriForFile(this,"enafilipovic.ferit.summerbody.fileprovider",photoFile)

@@ -9,6 +9,7 @@ import android.text.InputType
 import android.util.Half.toFloat
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.Button
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
@@ -130,7 +131,9 @@ class MeasurementTrackerActivity : AppCompatActivity() {
             .setView(measurementDialogView)
             .setTitle("Please enter your measurements for today!")
         val  mAlertDialog = mBuilder.show()
-        measurementDialogView.btn_add_measur.setOnClickListener{
+
+        val btn_add = measurementDialogView.findViewById<Button>(R.id.btn_add_measur)
+        btn_add.setOnClickListener{
             mAlertDialog.dismiss()
             //get text from EditTexts of custom layout
             val hips = measurementDialogView.hips.text.toString()
