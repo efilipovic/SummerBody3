@@ -45,7 +45,7 @@
         android:layout_marginBottom="@dimen/margin_bottom"
         app:layout_constraintRight_toRightOf="parent"/>
 
-    <Button
+  <!--  <Button
         android:id="@+id/button_signin_google"
         android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />-->
     <Button
         android:id="@+id/btn_signin"
         android:textSize="@dimen/label_text_size"

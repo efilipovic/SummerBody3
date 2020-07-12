@@ -79,9 +79,6 @@ class ProgramViewActivity : AppCompatActivity(), NavigationView.OnNavigationItem
     }
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.nav_profile -> {
-                Toast.makeText(this, "Profile clicked", Toast.LENGTH_SHORT).show()
-            }
             R.id.nav_weight -> {
                 startActivity(Intent(this, WeightTrackerActivity::class.java))
             }
@@ -93,7 +90,6 @@ class ProgramViewActivity : AppCompatActivity(), NavigationView.OnNavigationItem
             }
             R.id.nav_logoout -> {
                 auth.signOut()
-                Toast.makeText(this, "Session expired. please sign in again", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, MainActivity::class.java))
             }
         }

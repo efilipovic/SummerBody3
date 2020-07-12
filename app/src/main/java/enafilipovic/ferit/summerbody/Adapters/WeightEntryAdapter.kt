@@ -24,6 +24,7 @@ class WeightEntryAdapter (options: FirestoreRecyclerOptions<WeightEntry>): Fires
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WeightEntryHolder {
+        //Inflate weight_entry.xml
         val view = LayoutInflater.from(parent.context).inflate(R.layout.weight_entry, parent, false)
         return WeightEntryHolder(view)
     }

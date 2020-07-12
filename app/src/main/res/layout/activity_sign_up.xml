@@ -75,17 +75,18 @@
         android:id="@+id/reg_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:endIconMode="password_toggle"
         app:layout_constraintTop_toBottomOf="@+id/reg_username"
         app:layout_constraintLeft_toLeftOf="@id/reg_username"
         android:layout_margin="@dimen/margin_layout"
         android:paddingRight="@dimen/padding_all"
         android:paddingLeft="@dimen/padding_all"
-        app:endIconMode="clear_text"
         app:layout_constraintRight_toRightOf="parent"
         android:hint="@string/hint_password"
         app:errorEnabled="true">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
+            android:inputType="textPassword"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
