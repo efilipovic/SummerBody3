@@ -53,6 +53,7 @@ class ProgramViewActivity : AppCompatActivity(), NavigationView.OnNavigationItem
 
     private fun updateUI(currentUser : FirebaseUser?){
         if(currentUser!=null) {
+            //If user is signed in show recycler view
             programView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
             displayData()
         }else{

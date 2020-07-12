@@ -7,6 +7,7 @@ import android.provider.ContactsContract
 import android.text.InputType
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
@@ -60,6 +61,11 @@ class WeightTrackerActivity : AppCompatActivity() {
             startActivity(Intent)
             finish()
         }
+
+        back_arrow_wt.setOnClickListener{
+            startActivity(Intent(this, ProgramViewActivity::class.java))
+            finish()
+        }
     }
 
     @RequiresApi(Build.VERSION_CODES.M)
@@ -78,7 +84,7 @@ class WeightTrackerActivity : AppCompatActivity() {
                 .orderBy("date", Query.Direction.ASCENDING)
                 .addSnapshotListener { querysnapshot:QuerySnapshot?, ex ->
                     if (ex != null) {
-                        return@addSnapshotListener
+                        Toast.makeText(baseContext, "Failed retrieving data.", Toast.LENGTH_SHORT).show()
                     }
                     val weights = ArrayList<Entry?>()
 
@@ -116,7 +122,7 @@ class WeightTrackerActivity : AppCompatActivity() {
             .title("Add Weight")
             .content("What's your weight today?")
             .inputType(InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL)
-            .input("weight in kg", "", false) { _, weight ->
+            .input("Please enter weight in kg", "", false) { _, weight ->
                 getUserDocument()
                     .collection("weights")
                     .add( WeightEntry(weight.toString().toDouble(), Date().time)

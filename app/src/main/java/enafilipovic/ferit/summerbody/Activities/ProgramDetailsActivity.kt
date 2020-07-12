@@ -28,7 +28,6 @@ class ProgramDetailsActivity : AppCompatActivity() {
             finish()
         }
 
-
      //   setUpUI(program_id)
 
     }

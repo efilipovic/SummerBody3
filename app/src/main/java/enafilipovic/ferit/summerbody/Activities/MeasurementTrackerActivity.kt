@@ -9,6 +9,7 @@ import android.text.InputType
 import android.util.Half.toFloat
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import com.afollestad.materialdialogs.MaterialDialog
@@ -31,6 +32,7 @@ import enafilipovic.ferit.summerbody.Models.MeasurementEntry
 import enafilipovic.ferit.summerbody.Models.WeightEntry
 import enafilipovic.ferit.summerbody.R
 import kotlinx.android.synthetic.main.activity_measurement_tracker.*
+import kotlinx.android.synthetic.main.activity_program_details.*
 import kotlinx.android.synthetic.main.activity_weight_tracker.*
 import kotlinx.android.synthetic.main.measurements_dialog.*
 import kotlinx.android.synthetic.main.measurements_dialog.view.*
@@ -48,6 +50,11 @@ class MeasurementTrackerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_measurement_tracker)
         auth = FirebaseAuth.getInstance()
         lineChart = findViewById(R.id.measurement_graph)
+
+        back_arrow_m.setOnClickListener{
+            startActivity(Intent(this, ProgramViewActivity::class.java))
+            finish()
+        }
 
     }
     @RequiresApi(Build.VERSION_CODES.M)
@@ -129,11 +136,13 @@ class MeasurementTrackerActivity : AppCompatActivity() {
             val hips = measurementDialogView.hips.text.toString()
             val waist = measurementDialogView.waist.text.toString()
             val breast = measurementDialogView.breast.text.toString()
-            getUserDocument().collection("measurements")
-                .add( MeasurementEntry(Date().time,waist.toDouble(),hips.toDouble(),breast.toDouble()))
+            if(hips==""||waist==""||breast==""){
+                Toast.makeText(baseContext, "Please check your inputs.", Toast.LENGTH_SHORT).show()
+            }else{
+                getUserDocument().collection("measurements")
+                    .add( MeasurementEntry(Date().time,waist.toDouble(),hips.toDouble(),breast.toDouble()))
+            }
         }
-
-
     }
     private fun getUserDocument(): DocumentReference {
         val db = FirebaseFirestore.getInstance()

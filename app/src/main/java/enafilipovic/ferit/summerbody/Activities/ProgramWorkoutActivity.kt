@@ -25,10 +25,6 @@ class ProgramWorkoutActivity : AppCompatActivity() {
 
         var program_id = intent.getIntExtra(KEY_PROGRAM_ID,0)
 
-        back_arrow.setOnClickListener{
-            startActivity(Intent(this, ProgramDetailsActivity::class.java))
-            finish()
-        }
 
      button_nextworkout.setOnClickListener{
         setUpUI(program_id,workout_id)

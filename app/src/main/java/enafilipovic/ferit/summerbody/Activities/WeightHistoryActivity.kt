@@ -14,6 +14,7 @@ import com.google.firebase.firestore.Query
 import enafilipovic.ferit.summerbody.Adapters.WeightEntryAdapter
 import enafilipovic.ferit.summerbody.Models.WeightEntry
 import enafilipovic.ferit.summerbody.R
+import kotlinx.android.synthetic.main.activity_weight_history.*
 
 class WeightHistoryActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
@@ -23,6 +24,11 @@ class WeightHistoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_weight_history)
         auth = FirebaseAuth.getInstance()
+
+        back_arrow_wh.setOnClickListener{
+            startActivity(Intent(this, WeightTrackerActivity::class.java))
+            finish()
+        }
     }
     public override fun onStart() {
         super.onStart()

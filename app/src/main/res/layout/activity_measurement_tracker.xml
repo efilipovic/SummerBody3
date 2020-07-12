@@ -7,7 +7,7 @@
     tools:context=".Activities.MeasurementTrackerActivity">
 
     <ImageButton
-        android:id="@+id/back_arrow"
+        android:id="@+id/back_arrow_m"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="wrap_content"
@@ -19,7 +19,7 @@
     <TextView
 
         android:id="@+id/title_measurement_tracker"
-        app:layout_constraintLeft_toRightOf="@id/back_arrow"
+        app:layout_constraintLeft_toRightOf="@id/back_arrow_m"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
         android:padding="14dp"
         />
     <com.github.mikephil.charting.charts.LineChart
-        app:layout_constraintTop_toBottomOf="@id/back_arrow"
+        app:layout_constraintTop_toBottomOf="@id/back_arrow_m"
         android:padding="14dp"
         android:layout_width="match_parent"
         android:layout_height="400dip"

@@ -44,13 +44,19 @@ class PhotoTrackerActivity : AppCompatActivity() {
         btn_add_photo.setOnClickListener{
             takePicture()
         }
+        back_arrow_pt.setOnClickListener{
+            startActivity(Intent(this, ProgramViewActivity::class.java))
+            finish()
+        }
+        //Get permission for reading storage
         val permission = ContextCompat.checkSelfPermission(this,
             android.Manifest.permission.READ_EXTERNAL_STORAGE)
 
+        //Check if permission granted
         if (permission != PackageManager.PERMISSION_GRANTED) {
             requestPermissions(arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE),2000)
         }else{
-            //show images
+            //show images if permission granted
             showImages()
         }
 
@@ -100,11 +106,7 @@ class PhotoTrackerActivity : AppCompatActivity() {
         return allImages
     }
 
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
+    override fun onRequestPermissionsResult( requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         if(requestCode==1000){
             if(grantResults[0]==PackageManager.PERMISSION_GRANTED){
                 showImages()
@@ -116,8 +118,9 @@ class PhotoTrackerActivity : AppCompatActivity() {
     }
 
     private fun takePicture() {
+        //Start camera intent
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-
+        //Create image file if photo capured
         if(intent.resolveActivity(packageManager)!=null){
             var photoFile: File?=null            
             photoFile=createImageFile()
@@ -131,6 +134,7 @@ class PhotoTrackerActivity : AppCompatActivity() {
 
 
     private fun createImageFile(): File? {
+        //Save image to ext storage
         var fileName = Date().time.toString()
         var storageDir=getExternalFilesDir(Environment.DIRECTORY_PICTURES)
         val image = File.createTempFile(fileName,".jpg",storageDir)

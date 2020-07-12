@@ -37,9 +37,7 @@ class LoginActivity : AppCompatActivity() {
             startActivity(Intent(this, ProgramViewActivity::class.java))
             finish()
             }else{
-                Toast.makeText(baseContext, "Please verify your e-mail address.",
-                    Toast.LENGTH_SHORT
-                ).show()
+                Toast.makeText(baseContext, "Please verify your e-mail address.", Toast.LENGTH_SHORT).show()
             }
         } else{
             Toast.makeText(baseContext, "Login failed.",
