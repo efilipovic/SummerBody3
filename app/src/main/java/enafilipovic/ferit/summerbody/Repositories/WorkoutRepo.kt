@@ -17,7 +17,7 @@ object WorkoutRepo {
                     ProgramWorkoutItem(
                         R.drawable.wall_pushups,
                         "1. Stand about 3 feet away from a wall, facing the wall, with your feet shoulder-width apart.\n" +
-                                "2. Lean forward and place your hands flat on the wall, in line with your shoulders. Your body should be in plank position, with your spine straight, not sagging or arched.\n" +
+                                "2. Lean forward and place your hands flat on the wall, in line with your shoulders.\n" +
                                 "3. Lower your body toward the wall and then push back.\n" +
                                 "4. Repeat 10 times.",
                         "Wall pushups"
@@ -55,7 +55,7 @@ object WorkoutRepo {
                     ),
                     ProgramWorkoutItem(
                         R.drawable.knee_lifts,
-                        "1. Seated in a chair, with your arms resting but not pressing on the armrests, contract your right quadriceps muscles and lift your leg. Your knee and the back of your thigh should be 2 or 3 inches off the seat.\n" +
+                        "1. Seated in a chair, with your arms resting but not pressing on the armrests, contract your right quadriceps muscles and lift your leg.\n" +
                                 "2. Pause for 3 seconds and slowly lower your leg.\n" +
                                 "3. Complete 8 to 12 repetitions and then repeat with the opposite leg.",
                         "Knee Lifts"
@@ -73,7 +73,7 @@ object WorkoutRepo {
                     ProgramWorkoutItem(
                         R.drawable.neck_stretch,
                         "1. Stand with your feet flat on the floor, shoulder-width apart. Keep your hands relaxed at your sides.\n" +
-                                "2. Don’t tip your head forward or backward as you turn your head slowly to the right. Stop when you feel a slight stretch. Hold for 10 to 30 seconds.\n" +
+                                "2. Don’t tip your head forward or backward as you turn your head slowly to the right. Hold for 10 to 30 seconds.\n" +
                                 "3. Now turn to the left. Hold for 10 to 30 seconds.\n" +
                                 "4. Repeat 3 to 5 times.",
                         "Neck stretch"
@@ -81,15 +81,14 @@ object WorkoutRepo {
                     ProgramWorkoutItem(
                         R.drawable.back_stretch,
                         "1. Sit in a firm chair. Place your feet flat on the floor, shoulder-width apart.\n" +
-                                "2. Hold your arms up and out in front at shoulder height, with your palms facing outward and the backs of your hands pressed together. Relax your shoulders so they’re not scrunched up near your ears.\n" +
+                                "2. Hold your arms up and out in front at shoulder height, with your palms facing outward.\n" +
                                 "3. Reach your fingertips out until you feel a stretch. Your back will move away from the back of the chair.\n" +
-                                "4. Stop and hold for 10 to 30 seconds.\n" +
-                                "5. Repeat 3 to 5 times.",
+                                "4. Stop and hold for 10 to 30 seconds.\n",
                         "Back stretch"
                     ),
                     ProgramWorkoutItem(
                         R.drawable.knee_lifts,
-                        "1. Seated in a chair, with your arms resting but not pressing on the armrests, contract your right quadriceps muscles and lift your leg. Your knee and the back of your thigh should be 2 or 3 inches off the seat.\n" +
+                        "1. Seated in a chair, with your arms resting but not pressing on the armrests, contract your right quadriceps muscles and lift your leg. \n" +
                                 "2. Pause for 3 seconds and slowly lower your leg.\n" +
                                 "3. Complete 8 to 12 repetitions and then repeat with the opposite leg.",
                         "Knee Lifts"
@@ -106,7 +105,7 @@ object WorkoutRepo {
                 4, mutableListOf(
                     ProgramWorkoutItem(
                         R.drawable.knee_lifts,
-                        "1. Seated in a chair, with your arms resting but not pressing on the armrests, contract your right quadriceps muscles and lift your leg. Your knee and the back of your thigh should be 2 or 3 inches off the seat.\n" +
+                        "1. Seated in a chair, with your arms resting but not pressing on the armrests, contract your right quadriceps muscles and lift your leg. \n" +
                                 "2. Pause for 3 seconds and slowly lower your leg.\n" +
                                 "3. Complete 8 to 12 repetitions and then repeat with the opposite leg.",
                         "Knee Lifts"
@@ -120,7 +119,7 @@ object WorkoutRepo {
                     ProgramWorkoutItem(
                         R.drawable.neck_stretch,
                         "1. Stand with your feet flat on the floor, shoulder-width apart. Keep your hands relaxed at your sides.\n" +
-                                "2. Don’t tip your head forward or backward as you turn your head slowly to the right. Stop when you feel a slight stretch. Hold for 10 to 30 seconds.\n" +
+                                "2. Don’t tip your head forward or backward as you turn your head slowly to the right. Hold for 10 to 30 seconds.\n" +
                                 "3. Now turn to the left. Hold for 10 to 30 seconds.\n" +
                                 "4. Repeat 3 to 5 times.",
                         "Neck stretch"
@@ -128,10 +127,9 @@ object WorkoutRepo {
                     ProgramWorkoutItem(
                         R.drawable.back_stretch,
                         "1. Sit in a firm chair. Place your feet flat on the floor, shoulder-width apart.\n" +
-                                "2. Hold your arms up and out in front at shoulder height, with your palms facing outward and the backs of your hands pressed together. Relax your shoulders so they’re not scrunched up near your ears.\n" +
+                                "2. Hold your arms up and out in front at shoulder height, with your palms facing outward.\n" +
                                 "3. Reach your fingertips out until you feel a stretch. Your back will move away from the back of the chair.\n" +
-                                "4. Stop and hold for 10 to 30 seconds.\n" +
-                                "5. Repeat 3 to 5 times.",
+                                "4. Stop and hold for 10 to 30 seconds.\n",
                         "Back stretch"
                     )
                 )
